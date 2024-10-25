@@ -1,0 +1,51 @@
+**Paso a Paso del Laboratorio: Clonación y Manejo de Repositorios en Git**
+
+### 1. Clonar un Repositorio Remoto ###
+1. **Clonar el repositorio a tu máquina local**:
+   - Abre la terminal en tu computadora.
+   - Escribe el siguiente comando para clonar el repositorio:  
+        git clone https://github.com/at-virtual-wh/Lab-Registro
+       - Esto creará una copia del repositorio "Lab-Registro" en tu computadora.
+
+### 2. Crear un Nuevo Repositorio Local (30 minutos):
+1. **Crear un directorio local**:
+   - En la terminal, crea un nuevo directorio ejecutando:  
+     mkdir mi-nuevo-proyecto
+2. **Inicializar un repositorio de Git**:
+   - Navega al directorio creado:  
+     cd mi-nuevo-proyecto
+   - Inicializa un nuevo repositorio de Git en el directorio:  
+     git init
+3. **Crear un archivo README.md**:
+   - Crea un archivo llamado `README.md` dentro del directorio: 
+     echo "# Mi Nuevo Proyecto" > README.md
+4. **Crear una página de bienvenida en HTML**:
+   - Crea un archivo llamado `index.html`(Una imagen de Talento Tech y un enlace que diga "Click Aqui")
+5. **Realizar un commit inicial**:
+   - Agrega los archivos `README.md` e `index.html` al área de preparación (staging area): 
+     git add .
+       - Realiza un commit para guardar los cambios:  
+     git commit -m "Commit inicial con README y Página de bienvenida"
+6. **Conectar el repositorio local a GitHub y subir los cambios**:
+   - Crea un nuevo repositorio en GitHub llamado "EventoTalento".
+   - Conecta tu repositorio local con el repositorio remoto en GitHub:  
+     git remote add origin https://github.com/tu-usuario/EventoTalento.git
+       - Sube los cambios al repositorio remoto:  
+         git push -u origin master
+    
+### 3. Realizar un Pull Request (30 minutos):
+1. **Crear una nueva rama**:
+   - Crea una nueva rama llamada `modificaciones`:  
+     git checkout -b modificaciones
+2. **Agregar un nuevo archivo HTML**:
+   - Crea un archivo `gracias.html` que contenga un código HTML básico para mostrar un mensaje de "Gracias Por su Registro".
+3. **Realizar commit de los cambios**:
+   - Agrega el archivo al área de preparación y realiza un commit:  
+     git add .
+     git commit -m "Agregar archivo gracias.html"
+   - Sube la nueva rama al repositorio remoto:  
+     git push origin modificaciones
+4. **Crear un Pull Request**:
+   - Ingresa a GitHub y navega a tu repositorio "EventoTalento".
+   - Verás una opción para crear un Pull Request desde la rama `modificaciones` hacia la rama `master`.
+   - Sigue las instrucciones en pantalla para completar el Pull Request, solicitando la integración de los cambios en la rama principal.
